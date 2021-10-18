@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.dao.TopSectionInterface">
+    <insert id="InsertTopSection"></insert>
+    <delete id="DeleteById"></delete>
+
+
+    <select id="getTopSection" resultType="org.example.pojo.TopSection">
+        select * from topsection
+    </select>
+</mapper>

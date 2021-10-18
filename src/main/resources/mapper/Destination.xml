@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.dao.DestinationInterface">
+    <insert id="insertDestinationById"></insert>
+    <update id="updatePriceById"></update>
+    <update id="updatenameById"></update>
+    <update id="updatedetailById"></update>
+    <update id="updatesrcById"></update>
+    <delete id="deleteDestinationById"></delete>
+    <select id="getDestinationByDesId" resultType="org.example.pojo.Destination" parameterType="integer">
+        select * from destination where desid=#{desid}
+    </select>
+    <select id="getDestinationByType" resultType="org.example.pojo.Destination">
+        select * from destination where type =#{type};
+    </select>
+    <select id="getDestinationByCity" resultType="org.example.pojo.Destination">
+        select * from destination where desname like CONCAT('%',#{name},'%')
+    </select>
+
+</mapper>

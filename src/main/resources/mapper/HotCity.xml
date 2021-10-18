@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.dao.HotCityInterface">
+    <insert id="InsertHotcity"></insert>
+    <delete id="DeleteByname"></delete>
+
+
+    <select id="getHotCity" resultType="org.example.pojo.HotCity">
+        select * from hotcity
+    </select>
+</mapper>

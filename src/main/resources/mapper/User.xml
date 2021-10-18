@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.dao.UserInterface">
+    <insert id="Regiter" parameterType="org.example.pojo.User">
+        insert into user set mail=#{mail},username=#{username},password=#{password},vip=#{vip}
+    </insert>
+    <update id="Bookvip">
+        update user set vip=1 where mail=#{mail}
+    </update>
+    <update id="Cancelvip"></update>
+
+    <update id="ChangeName">
+        update user set username=#{username} where mail=#{mail}
+    </update>
+    <update id="ChangePassword">
+        update user set password=#{npw} where mail=#{mail}
+    </update>
+    <delete id="DeleteBymail"></delete>
+
+    <select id="getUserByMail" resultType="org.example.pojo.User">
+        select * from user where mail=#{mail}
+    </select>
+</mapper>

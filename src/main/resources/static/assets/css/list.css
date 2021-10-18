@@ -1,0 +1,42 @@
+.MainDiv{
+
+		width: 80%;
+		background: #B2E0DF;
+		margin: 0 auto;
+	}
+	.ulStyle{
+		width: 100%;
+		margin: 0 auto;
+		list-style:none;
+	}
+	.detail{
+		width:90%;
+		height: 250px;
+		margin-left:30px;
+		background-color:#DEFFFF;
+		border-top:2px solid #ccc;
+		border-left: 2px solid #ccc;
+		border-right:  2px solid #ccc;
+	}
+	.detail:last-child {
+		border-bottom: 	2px solid #ccc;
+	}
+	.Ht{
+		height:90%;
+		width:90%;
+		margin-top:3%;
+		margin-left:5%;
+	}
+	.imgsizew{
+		width: 300px;
+		height: 180px;
+		float: left;
+	}
+	.imgsize{
+		width: 300px;
+		height: 180px;
+	}
+	.dlt{
+		float: left;
+	}
+	
