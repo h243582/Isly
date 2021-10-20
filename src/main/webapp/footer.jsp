@@ -34,10 +34,10 @@
 										</div>
 										<div class="contact-ft">
 											<ul>
-												<li><i class="fi ti-location-pin"></i>辽宁省,金州区,大连市,大连大学</li>
-												<li><i class="fi ti-mobile"></i>+8618096362937</li>
-												<li><i class="fi flaticon-email"></i>liuyongjun46@gmail.com</li>
-												<li><i class="fi flaticon-email"></i>1606598914@qq.com</li>
+												<li><i class="fi ti-location-pin"></i>湖南省,常德区,张家界市,吉首大学</li>
+												<li><i class="fi ti-mobile"></i>18680435149</li>
+												<li><i class="fi flaticon-email"></i>heyufei@gmail.com</li>
+												<li><i class="fi flaticon-email"></i>2435823336@qq.com</li>
 											</ul>
 										</div>
 									</div>

@@ -9,7 +9,11 @@ import org.example.pojo.Destination;
 public interface DestinationInterface {
 	public Destination getDestinationByDesId(int desId);
 	public List<Destination> getDestinationByType(String type);
+
+
 	public List<Destination> getDestinationByCity(String name);
+
+
 	public int updatePriceById(int Id,double price);
 	public int updatenameById(int Id,String name);
 	public int updatedetailById(int Id,String detail);

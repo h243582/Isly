@@ -47,12 +47,12 @@ public class ActionController {
 
     @RequestMapping("/")
     public String index(HttpServletRequest request, HttpServletResponse response){
-        if(allAttribute.getHotcity()==null){
+//        if(allAttribute.getHotcity()==null){
             allAttribute.setTopsection(new ArrayList<List<String>>());
-            List<TopSection> t= topSectionService.getTopSection();
+            List<TopSection> t= topSectionService.getTopSection(); //生成主页时获取所有头部景点
             for(TopSection a:t){
                 List<String> temp=new ArrayList<>();
-                Destination p=destinationService.getDestinationByDesId(a.getDesid());
+                Destination p=destinationService.getDestinationByDesId(a.getDesid());//根据景点id查询到景点信息
                 temp.add(p.getName());
                 temp.add(p.getDetail());
                 temp.add(p.getSrc());
@@ -62,9 +62,15 @@ public class ActionController {
 
             allAttribute.setHotcity(hotCityService.getHotCity());
             allAttribute.setType(typeService.getType());
-        }
+//        }
         GetData(request,response);
         return "isly";
+    }
+
+    public void GetData(HttpServletRequest request,HttpServletResponse response){
+        request.setAttribute("topsection", allAttribute.getTopsection());
+        request.setAttribute("hotcity", allAttribute.getHotcity());
+        request.setAttribute("type",allAttribute.getType());
     }
 
     @PostMapping("/login")
@@ -73,10 +79,12 @@ public class ActionController {
         String password=request.getParameter("pw");
         User user=userService.Login(mail,password);
         if(user!=null) {
+            /*账号密码正确，把公共值传入公共报文类中*/
             HttpSession session=request.getSession();
             allAttribute.setUserName(user.getUsername());
             allAttribute.setMail(mail);
             allAttribute.setLoginmessage("");
+            //把公共值传入Session中
             session.setAttribute("UserName",user.getUsername());
             session.setAttribute("Loginmessage", "");
             session.setAttribute("mail", mail);
@@ -105,6 +113,12 @@ public class ActionController {
         return "login";
     }
 
+    /**
+     * 显示我的订单
+     * @param request
+     * @param response
+     * @return
+     */
     @RequestMapping("/MyOrder")
     public String mydorer(HttpServletRequest request,HttpServletResponse response){
         HttpSession session=request.getSession();
@@ -297,11 +311,7 @@ public class ActionController {
         }
         return "vip";
     }
-    public void GetData(HttpServletRequest request,HttpServletResponse response){
-        request.setAttribute("topsection", allAttribute.getTopsection());
-        request.setAttribute("hotcity", allAttribute.getHotcity());
-        request.setAttribute("type",allAttribute.getType());
-    }
+
 
 }
 

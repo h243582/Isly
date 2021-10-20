@@ -9,8 +9,12 @@ import java.util.Vector;
 
 @Mapper
 public interface TypeInterface {
+
 	public List<Type> getType();
+
 	public int DeleteByTypeName(String type_name);
+
 	public int Insert(Type type);
+
 	public int UpdateSrcByTypeName(String type_name,String src);
 }

@@ -7,14 +7,17 @@
     <update id="updatedetailById"></update>
     <update id="updatesrcById"></update>
     <delete id="deleteDestinationById"></delete>
+
     <select id="getDestinationByDesId" resultType="org.example.pojo.Destination" parameterType="integer">
         select * from destination where desid=#{desid}
     </select>
+
     <select id="getDestinationByType" resultType="org.example.pojo.Destination">
         select * from destination where type =#{type};
     </select>
+
     <select id="getDestinationByCity" resultType="org.example.pojo.Destination">
-        select * from destination where desname like CONCAT('%',#{name},'%')
+        select * from destination where name like CONCAT('%',#{name},'%') or desname like '%'#{name}'%'
     </select>
 
 </mapper>

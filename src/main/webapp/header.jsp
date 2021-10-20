@@ -22,7 +22,7 @@
 				<div class="col col-md-6 col-sm-7 col-12">
 					<div class="contact-intro">
 						<ul>
-							<li style="font-size: large;"><i class="fi ti-location-pin"></i>辽宁省,大连市,金州区,大连大学</li>
+							<li style="font-size: large;"><i class="fi ti-location-pin"></i>湖南省,常德区,张家界市,吉首大学</li>
 						</ul>
 					</div>
 				</div>
